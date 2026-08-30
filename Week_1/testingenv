@@ -1,0 +1,11 @@
+# Gemini connection test
+from openai import OpenAI
+
+GEMINI_API_KEY = get_api_key("GEMINI_API_KEY")
+
+gemini_client = OpenAI(
+    api_key=GEMINI_API_KEY,
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+)
+
+print_models(gemini_client)
